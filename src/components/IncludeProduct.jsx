@@ -19,7 +19,7 @@ function IncludeProduct() {
   if (!!id) {
     useEffect(() => {
       axios
-        .get(`http://localhost:8080/api/products${id}`)
+        .get(`http://localhost:8080/api/products/${id}`)
         .then((res) => setData(res.data.oneProduct))
         .catch((err) => console.log(err));
     }, [id]);
@@ -67,7 +67,7 @@ function IncludeProduct() {
         data.thumbnail
       ) {
         axios
-          .patch(`http://localhost:8080/api/products${data._id}`, data)
+          .patch(`http://localhost:8080/api/products/${data._id}`, data)
           .then((res) => console.log(res))
           .catch((err) => console.log(err));
         navigate("/");
