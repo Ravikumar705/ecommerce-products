@@ -8,7 +8,7 @@ function ProductList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/")
+      .get("http://localhost:8080/api/products")
       .then((res) => setProduct(res.data.products))
       .catch((err) => console.warn(err));
   }, [products]);
@@ -17,7 +17,7 @@ function ProductList() {
     const confirmation = confirm("Are you sure ?");
     if (confirmation) {
       axios
-        .delete(`http://localhost:8080/${id}`)
+        .delete(`http://localhost:8080/api/products/${id}`)
         .then((res) => {
           console.log(res.data.success);
         })
@@ -30,7 +30,7 @@ function ProductList() {
       <div>
         <h1>Product List</h1>{" "}
         <div className="addButton">
-          <Link className="addProduct" to="/addproduct">
+          <Link className="addProduct" to="/add-product">
             AddProduct
           </Link>
         </div>
@@ -42,7 +42,7 @@ function ProductList() {
               <div className="button-container">
                 <button
                   onClick={() =>
-                    navigate("/addproduct", {
+                    navigate("/add-product", {
                       replace: false,
                       state: { id: product._id },
                     })
