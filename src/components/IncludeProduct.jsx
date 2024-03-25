@@ -86,7 +86,6 @@ function IncludeProduct() {
       </div>
       <form onSubmit={!!id ? dataUpdate : dataSend}>
         <label htmlFor="title">Title</label>
-        <br />
         <input
           type="text"
           name="title"
@@ -99,7 +98,6 @@ function IncludeProduct() {
         />
         <br />
         <label htmlFor="description">Description</label>
-        <br />
         <input
           type="text"
           name="description"
@@ -112,7 +110,6 @@ function IncludeProduct() {
         />
         <br />
         <label htmlFor="price">Price</label>
-        <br />
         <input
           type="text"
           name="price"
@@ -125,7 +122,6 @@ function IncludeProduct() {
         />
         <br />
         <label htmlFor="discountPercentage">DiscountPercentage</label>
-        <br />
         <input
           type="text"
           name="discountPercentage"
@@ -138,7 +134,6 @@ function IncludeProduct() {
         />
         <br />
         <label htmlFor="rating">Rating</label>
-        <br />
         <input
           type="text"
           name="rating"
@@ -151,7 +146,6 @@ function IncludeProduct() {
         />
         <br />
         <label htmlFor="stock">Stock</label>
-        <br />
         <input
           type="text"
           name="stock"
@@ -164,7 +158,6 @@ function IncludeProduct() {
         />
         <br />
         <label htmlFor="thumbnail">Thumbnail</label>
-        <br />
         <input
           type="text"
           name="thumbnail"
